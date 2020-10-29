@@ -31,8 +31,8 @@ export class ThirdPageComponent implements OnInit {
   onSubmit(){
     try{
       const notes: Notes = { ...this.notesForm.value, weather: this.forecast};
-      this.storage.set(this.storage.NOTES, notes)
-      console.log(this.notesForm.value)
+      this.storage.add(this.storage.NOTES, notes);
+      console.log(this.notesForm.value);
       alert("Success!")
     } catch(e){
       if(!e.hasOwnProperty("message")){

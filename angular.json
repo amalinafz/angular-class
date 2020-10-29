@@ -31,9 +31,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -126,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-class"
+    }
+  },
+  "defaultProject": "angular-class",
+  "cli": {
+    "analytics": "26abdef1-edee-4606-87b4-ba5843938f88"
+  }
 }

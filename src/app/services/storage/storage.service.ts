@@ -22,6 +22,30 @@ export class StorageService extends Table{
     }
   }
 
+  add<T>(table,value){
+    try{
+      const d = this.get(table);
+      if (!d) return this.set(table, [value]);
+      if(!Array.isArray(d)) throw "Not an array";
+      d.push(value);
+      return this.set(table,d);
+    } catch(e){
+      throw e;
+    }
+  }
+
+  update(table,value){
+    try{
+      const d = this.get(table);
+      console.log(d);
+      if(!(typeof d == "object")) throw "Not an object";
+      const merge = {...d, ...value};
+      return this.set(table,d);
+    } catch(e){
+      throw e;
+    }
+  }
+
   get<T>(table){
     try{
       return JSON.parse(localStorage.getItem(table));

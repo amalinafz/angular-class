@@ -1,1 +1,47 @@
-<app-slider slider-src="./assets/cat2.jpg"></app-slider>
+<!-- <app-slider slider-src="./assets/cat2.jpg"></app-slider> -->
+
+<!-- <p>Weather</p> -->
+
+<div class="row justify-content-around" *ngFor="let note of notes">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header text-center">
+            <h5>{{ note.weather.name }}</h5>
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Coordinate Information</h5>
+                <p class="card-text">Latitude: {{ note.weather.coord.lat || "Loading...."}}</p>
+                <p class="card-text">Longitute: {{ note.weather.coord.lon || "Loading...."}}</p>
+
+                <h5 class="card-title">Weather Information</h5>
+                <p class="card-text">Temperature: {{ note.weather.main.temp || "Loading...."}}</p>
+                <p class="card-text">Pressure: {{ note.weather.main.pressure || "Loading...."}}</p>
+                <p class="card-text">Humidity: {{ note.weather.main.humidity || "Loading...."}}</p>
+                <p class="card-text">Min Temp: {{ note.weather.main.temp_min || "Loading...."}}</p>
+                <p class="card-text">Max Temp: {{ note.weather.main.temp_max || "Loading...."}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+                <h5 class="card-header text-center">Notes</h5>
+                <div class="card-body">
+                <h5 class="card-title">15 October 2020</h5>
+                <div class="form-group">
+                    <label>Title</label>
+                    <p>{{note.title}}</p>
+                </div>
+                <div class="form-group">
+                    <label>Body</label>
+                    <p>{{note.body}}</p>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+directive
+pipe
+model- data structure...
+await ... toPromise()

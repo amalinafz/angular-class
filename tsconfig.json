@@ -19,6 +19,7 @@
       "dom"
     ]
   },
+  "forceConsistentCasingInFileNames": false,
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
